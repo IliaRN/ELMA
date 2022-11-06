@@ -22,9 +22,8 @@ func ParenthesesTask(inputString string) string {
 		case 125, 41, 93:
 			if len(stack) == 0 || stack[len(stack)-1] != mapOfCases[sym] {
 				return "НЕТ"
-			} else {
-				stack = stack[:len(stack)-1]
 			}
+			stack = stack[:len(stack)-1]
 		}
 	}
 	if len(stack) == 0 {
